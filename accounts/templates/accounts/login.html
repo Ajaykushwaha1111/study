@@ -1,0 +1,29 @@
+{% extends 'includes/main.html'%}
+{% block body%}
+<div class="container">
+    <div class="login-box">
+        <h6>
+            {% if messages %}
+            <div class="messages alert alert-danger">
+                {% for message in messages %}
+                <strong
+                {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</strong>
+             {% endfor %}
+            </div>
+            {% endif %}
+        </h6>
+        <h1 class="text-center"><strong>Login Page</strong></h1>
+
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Login">
+
+            </div>
+            <div class="m-2">Forget Password?</div>
+            <a href="{% url 'signup'%}" class="btn btn-primary w-100">Create new Account</a>
+        </form>
+    </div>
+</div>
+{% endblock%}

@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Staatliches&display=swap');
+body{
+background:#eee;
+font-family: 'Roboto Slab', serif;
+
+}
+.login-box{
+background: #fafafa;
+    width: 40%;
+    margin: auto;
+    margin-top: 8%;
+    border-radius: 10px;
+    padding: 2%;
+    box-shadow: 1px 2px 11px 0px #8BC34A;
+}
+
+.errorlist{
+    color:red;
+}
+
+.container-div{
+width:90%;
+margin:auto;
+}
+
+.b-sh:hover{
+box-shadow: 1px 2px 12px 0px #0062cc;
+cursor:pointer;
+}
